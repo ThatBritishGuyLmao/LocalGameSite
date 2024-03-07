@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>British Mans Website</title>
+  <link rel="icon" type="image/png" href="https://i.imgflip.com/53hxop.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    #randomPhrase {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>BRITISH MANS WEBSITE</h1>
+  <button id="tabCloak" class="button">Tab cloak</button>
+  <button id="launchChatroom" class="button">Chatroom</button>
+  <button id="launchGames" class="button">Games</button>
+  <button id="launchChatGPT" class="button">ChatGPT</button>
+  <div id="randomPhrase"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var phrases = [
+        "Andy is gay :D",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "British Man is cool :D",
+        "Sub to bro - https://www.youtube.com/@thelambking",
+        "100% Legit Robux Vbucks Cracked Minecraft download 100% no scam real"
+      ];
+
+      var randomIndex = Math.floor(Math.random() * phrases.length);
+      var randomPhrase = phrases[randomIndex];
+
+      var phraseElement = document.getElementById("randomPhrase");
+      phraseElement.textContent = randomPhrase;
+    });
+
+    document.getElementById("tabCloak").onclick = function() {
+      document.title = "Classes";
+      document.querySelector('link[rel="icon"]').href = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/1186px-Google_Classroom_Logo.svg.png";
+    };
+    document.getElementById("launchChatroom").onclick = function() {
+      document.body.innerHTML = '<iframe id="chatroomFrame" src="https://chitchatter.im/public/596f2eb2-8eff-452f-9a71-8db815bd0794?embed=1"></iframe>';
+    };
+    document.getElementById("launchGames").onclick = function() {
+      document.body.innerHTML = "";
+      setTimeout(function() {
+        var games = [
+          { name: "Slope", url: "https://mathadventure1.github.io/slope/slope/index.html" },
+          { name: "Minecraft", url: "https://sd592g.github.io/zj684od4lfg/" },
+          { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
+          { name: "Stickman Hook", url: "https://mountain658.github.io/g/stickmanhook/index.html" },
+          { name: "Skribbl.io", url: "https://skribbl.io/" },
+          { name: "2048", url: "https://play2048.co/" },
+          { name: "Paper.io 2", url: "https://mountain658.github.io/g/paperio2/paperio2.html" },
+          { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
+          { name: "World's Hardest Game", url: "https://mountain658.github.io/zworldsHardestGame.html" },
+          { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
+          { name: "BitLife", url: "https://ubg365.github.io/bitlife-life-simulator/play.html" },
+          { name: "Moto X3M", url: "https://ubg365.github.io/moto-x3m/play.html" },
+          { name: "Death Run 3D", url: "https://ubg365.github.io/death-run-3d/" },
+          { name: "EggyCar", url: "https://ubg365.github.io/eggy-car/play.html" },
+          { name: "Stack", url: "https://ubg365.github.io/stack/" },
+          { name: "Super Mario 64", url: "https://sm64-embed.glitch.me/start.html" },
+          { name: "Doom", url: "https://msdos-games.com/game/?prn=doom" },
+          { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
+          { name: "Monkey Mart", url: "https://ubg365.github.io/monkey-mart/play.html" },
+          { name: "Drift Boss", url: "https://ubg365.github.io/drift-boss/" },
+          { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
+          { name: "Snake", url: "https://ubg100.github.io/games/snakegame/index.html" }
+        ];
+
+        var container = document.createElement("div");
+        container.setAttribute("id", "gamesContainer");
+        document.body.appendChild(container);
+
+        games.forEach(function(game) {
+          var button = document.createElement("button");
+          button.textContent = game.name;
+          button.className = "button";
+          button.onclick = function() {
+            document.getElementById("gamesContainer").innerHTML = '<object id="' + game.name.replace(/ /g, "") + 'Frame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
+          };
+          container.appendChild(button);
+        });
+      }, 1000);
+    };
+
+    document.getElementById("launchChatGPT").onclick = function() {
+      document.body.innerHTML = '<object id="chatGPTFrame" type="text/html" data="https://chatgptfree.ai/chat/" style="width: 100%; height: 100vh;"></object>';
+    };
+  </script>
+</body>
+</html>

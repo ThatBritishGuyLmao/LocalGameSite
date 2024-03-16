@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>British Mans Website</title>
+  <link rel="icon" type="image/png" href="https://i.imgflip.com/53hxop.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    #randomPhrase {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>BRITISH MANS WEBSITE</h1>
+  <button id="tabCloak" class="button">Tab cloak</button>
+  <button id="launchChatroom" class="button">Chatroom</button>
+  <button id="launchGames" class="button">Games</button>
+  <button id="launchApps" class="button">Apps</button>
+  <div id="randomPhrase"></div>
+  <div id="instructions" class="hidden">
+    <h2>READ THIS</h2>
+    <p>This is a huge work in progress. If anything gets blocked, follow these steps:<br>Restart your device ( Make sure the screen turns black, do power button + refresh key on chromebook )<br>DON'T restore tabs, open this file again, and nothing should be blocked. If it's still blocked, play the games and apps because they can't be blocked.<br>Sorry for the yapping, thanks :D - British Man</p>
+    <button id="continueButton" class="button">Continue</button>
+  </div>
+  <button id="ruffleButton" class="button hidden">Ruffle</button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var phrases = [
+        "Andy is gay :D",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "British Man is cool :D",
+        "Sub to bro - https://www.youtube.com/@thelambking",
+        "100% Legit Robux Vbucks Cracked Minecraft download 100% no scam real",
+        "6 Trojan viruses detected ( Definitely not a scam )",
+        "Sorry ms smith :(",
+        "Probably not coded by ChatGPT"
+      ];
+
+      var randomIndex = Math.floor(Math.random() * phrases.length);
+      var randomPhrase = phrases[randomIndex];
+
+      var phraseElement = document.getElementById("randomPhrase");
+      phraseElement.textContent = randomPhrase;
+    });
+
+    document.getElementById("tabCloak").onclick = function() {
+      document.title = "Classes";
+      document.querySelector('link[rel="icon"]').href = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/1186px-Google_Classroom_Logo.svg.png";
+    };
+
+    document.getElementById("launchChatroom").onclick = function() {
+      document.body.innerHTML = '';
+      var passText = document.createElement("p");
+      passText.textContent = "Pass: imsorrymrssmith";
+      passText.style.color = "#fff";
+      passText.style.marginTop = "20px";
+      document.body.appendChild(passText);
+
+      var copyButton = document.createElement("button");
+      copyButton.textContent = "Copy";
+      copyButton.className = "button";
+      copyButton.onclick = function() {
+        var pass = "imsorrymrssmith";
+        navigator.clipboard.writeText(pass).then(function() {
+          alert("Copied");
+        }, function() {
+          alert("Failed to copy password to clipboard.");
+        });
+      };
+      document.body.appendChild(copyButton);
+
+      var continueButton = document.createElement("button");
+      continueButton.textContent = "Continue To Chatroom";
+      continueButton.className = "button";
+      continueButton.onclick = function() {
+        document.body.innerHTML = '<object id="chatroomFrame" type="text/html" data="https://y99.in/rw/1580322" style="width: 100%; height: 100vh;"></object>';
+      };
+      document.body.appendChild(continueButton);
+    };
+
+    document.getElementById("launchGames").onclick = function() {
+      document.body.innerHTML = "";
+      setTimeout(function() {
+        var games = [
+          { name: "Slope", url: "https://mathadventure1.github.io/slope/slope/index.html" },
+          { name: "Minecraft", url: "https://sd592g.github.io/zj684od4lfg/" },
+          { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
+          { name: "Stickman Hook", url: "https://mountain658.github.io/g/stickmanhook/index.html" },
+          { name: "Skribbl.io", url: "https://skribbl.io/" },
+          { name: "2048", url: "https://play2048.co/" },
+          { name: "Paper.io 2", url: "https://mountain658.github.io/g/paperio2/paperio2.html" },
+          { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
+          { name: "World's Hardest Game", url: "https://mountain658.github.io/zworldsHardestGame.html" },
+          { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
+          { name: "BitLife", url: "https://ubg365.github.io/bitlife-life-simulator/play.html" },
+          { name: "Moto X3M", url: "https://ubg365.github.io/moto-x3m/play.html" },
+          { name: "Death Run 3D", url: "https://ubg365.github.io/death-run-3d/" },
+          { name: "EggyCar", url: "https://ubg365.github.io/eggy-car/play.html" },
+          { name: "Stack", url: "https://ubg365.github.io/stack/" },
+          { name: "Super Mario 64", url: "https://sm64-embed.glitch.me/start.html" },
+          { name: "Doom", url: "https://msdos-games.com/game/?prn=doom" },
+          { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
+          { name: "Monkey Mart", url: "https://ubg365.github.io/monkey-mart/play.html" },
+          { name: "Drift Boss", url: "https://ubg365.github.io/drift-boss/" },
+          { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
+          { name: "Snake", url: "https://ubg100.github.io/games/snakegame/index.html" },
+          { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
+          { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
+          { name: "Stealing the diamond", url: "https://mountain658.github.io/zstealingthediamond.html" },
+          { name: "Infiltrating the airship", url: "https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" },
+          { name: "Fleeing the complex", url: "https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" },
+          { name: "1v1.lol", url: "https://1v1.lol/" },
+          { name: "Time shooter", url: "https://games.crazygames.com/en_US/time-shooter/index.html" },
+          { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
+          { name: "Doodle Jump", url: "https://webglmath.github.io/doodle-jump/" },
+          { name: "Friday Night Funkin", url: "https://boxing2.github.io/b88/friday-night-funkin/" },
+          { name: "Drift Hunters", url: "https://htmlxm.github.io/h/drift-hunters/" },
+          { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
+          { name: "Crossy Road", url: "https://htmlxm.github.io/h/crossy-road/" },
+          { name: "Flappy Bird", url: "https://htmlxm.github.io/h8/flappy-bird-origin/" },
+          { name: "Retro Bowl", url: "https://loserboysonyt.github.io/" },
+          { name: "Tunnel Rush", url: "https://ubg44.github.io/TunnelRush/" },
+          { name: "Bouncy Motors", url: "https://www.twoplayergames.org/gameframe/bouncy-motors" },
+          { name: "Hole.io", url: "https://hole-io.com/" },
+          // New game object for FNAF
+          { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
+          // New game object for Krunker.io
+          { name: "Krunker.io", url: "https://krunker.io/" },
+          // Tomb of the mask button added
+          { name: "Tomb of the mask", url: "https://mountain658.github.io/g/tombofthemask/index.html" } 
+        ];
+        var container = document.createElement("div");
+        container.setAttribute("id", "gamesContainer");
+        document.body.appendChild(container);
+
+        games.forEach(function(game) {
+          var button = document.createElement("button");
+          button.textContent = game.name;
+          button.className = "button";
+          button.onclick = function() {
+            document.getElementById("gamesContainer").innerHTML = '<object id="' + game.name.replace(/ /g, "") + 'Frame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
+          };
+          container.appendChild(button);
+        });
+      }, 1000);
+    };
+
+    document.getElementById("launchApps").onclick = function() {
+      document.querySelectorAll('.button').forEach(function(button) {
+        button.classList.add('hidden');
+      });
+      document.querySelectorAll('h1, #randomPhrase').forEach(function(element) {
+        element.classList.add('hidden');
+      });
+      setTimeout(function() {
+        document.getElementById('ruffleButton').classList.remove('hidden');
+        // Adding the Kahoot.rocks button
+        var kahootRocksButton = document.createElement("button");
+        kahootRocksButton.textContent = "Kahoot.rocks";
+        kahootRocksButton.className = "button";
+        kahootRocksButton.onclick = function() {
+          document.body.innerHTML = '<object id="kahootRocksFrame" type="text/html" data="https://kahoot.rocks/" style="width: 100%; height: 100vh;"></object>';
+        };
+        document.body.appendChild(kahootRocksButton);
+
+        // Adding the ChatGPT button
+        var chatGPTButton = document.createElement("button");
+        chatGPTButton.textContent = "ChatGPT";
+        chatGPTButton.className = "button";
+        chatGPTButton.onclick = function() {
+          document.body.innerHTML = '<object id="chatGPTFrame" type="text/html" data="https://chatgptfree.ai/chat/" style="width: 100%; height: 100vh;"></object>';
+        };
+        document.body.appendChild(chatGPTButton);
+
+        // Adding the :) button
+        var smileButton = document.createElement("button");
+        smileButton.textContent = ":)";
+        smileButton.className = "button";
+        smileButton.onclick = function() {
+          for (var i = 0; i < 30; i++) {
+            window.open("https://youareanidiot-cc.translate.goog/lol.html?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en", "_blank", "width=800,height=600");
+          }
+          var gifElement = document.createElement("img");
+          gifElement.src = "https://ia600208.us.archive.org/35/items/youareanidiotgif/You%20are%20an%20idiot%21%21.gif";
+          gifElement.style.width = "100%";
+          gifElement.style.height = "100%";
+          gifElement.style.position = "fixed";
+          gifElement.style.top = "0";
+          gifElement.style.left = "0";
+          gifElement.style.zIndex = "9999";
+          document.body.appendChild(gifElement);
+        };
+        document.body.appendChild(smileButton);
+      }, 1000);
+    };
+
+    document.getElementById("continueButton").onclick = function() {
+      document.querySelectorAll('.button, h1, #randomPhrase, #instructions').forEach(function(element) {
+        element.classList.add('hidden');
+      });
+      document.body.innerHTML = '<object id="unblockerFrame" type="text/html" data="https://bing.com/" style="width: 100%; height: 100vh;"></object>';
+    };
+
+    document.getElementById("ruffleButton").onclick = function() {
+      document.body.innerHTML = '<object id="ruffleFrame" type="text/html" data="https://ruffle.rs/demo/" style="width: 100%; height: 100vh;"></object>';
+    };
+  </script>
+</body>
+</html>

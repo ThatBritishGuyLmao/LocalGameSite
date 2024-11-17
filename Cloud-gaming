@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Gaming on Your School Chromebook</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    object {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    #instructions h2 {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Made by British Man</h1>
+  <h2>You will need: A personal computer, (or a working proxy for school), and your mom's credit card.</h2>
+
+  <div id="content">
+    <button class="button" id="launchButton">Launch cloud gaming</button>
+    <button class="button" id="instructionsButton">Instructions</button>
+  </div>
+
+  <div id="instructions" class="hidden">
+    <h2>INSTRUCTIONS:</h2>
+    <h2>1: Make an account here: <a href="https://app.airgpu.com/signup" target="_blank" style="color: lightblue;">https://app.airgpu.com/signup</a>. Use a personal computer or a pr0xy at school.</h2>
+    <h2>2:On your personal computer, or pr0xy, Click on "Add credit" then "Purchase". You will be redirected to a site where you can fill out your credit card info, and purchase credits</h2>
+    <h2>3:Click on "Launch cloud gaming" and log into the account with the credits. Start a machine, and play your games! ( Fortnite don't work sorry :( )</h2>
+    <button class="button" id="backButton">Back</button>
+  </div>
+
+  <script>
+    // Event listener for Launch button
+    document.getElementById('launchButton').addEventListener('click', function() {
+      // Hide the header and content
+      document.querySelector('h1').classList.add('hidden');
+      document.querySelector('h2').classList.add('hidden');
+      document.getElementById('content').classList.add('hidden');
+
+      // Create an <object> element to embed the external page
+      const objectTag = document.createElement('object');
+      objectTag.data = 'https://app.airgpu.com/signup'; // URL for cloud gaming signup
+      document.body.appendChild(objectTag);
+    });
+
+    // Event listener for Instructions button
+    document.getElementById('instructionsButton').addEventListener('click', function() {
+      // Hide the header and content
+      document.querySelector('h1').classList.add('hidden');
+      document.querySelector('h2').classList.add('hidden');
+      document.getElementById('content').classList.add('hidden');
+
+      // Show instructions
+      document.getElementById('instructions').classList.remove('hidden');
+    });
+
+    // Event listener for Back button (to return to the main screen)
+    document.getElementById('backButton').addEventListener('click', function() {
+      // Hide instructions and show the main screen
+      document.getElementById('instructions').classList.add('hidden');
+      document.querySelector('h1').classList.remove('hidden');
+      document.querySelector('h2').classList.remove('hidden');
+      document.getElementById('content').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
